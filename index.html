@@ -1,0 +1,82 @@
+# web-domain-mini
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Explorer Tĩnh | Khám Phá Kiến Trúc Web</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌐 URL Explorer Tĩnh</h1>
+    <p>Nền tảng trực quan hóa các khái niệm cốt lõi: Domain, Hosting và Cấu trúc URL</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. Các Khái Niệm Cơ Bản</h2>
+      <div class="grid-3">
+        <div class="concept-box border-domain">
+          <span class="badge bg-domain">Domain (Tên miền)</span>
+          <p>Là <b>địa chỉ định danh</b> bằng chữ của một website trên Internet (Ví dụ: <code>google.com</code>). Nó thay thế cho dãy địa chỉ IP phức tạp để con người dễ nhớ.</p>
+          <p class="metaphor"><i>📌 Ẩn dụ: Địa chỉ nhà của bạn.</i></p>
+        </div>
+        
+        <div class="concept-box border-hosting">
+          <span class="badge bg-hosting">Hosting (Lưu trữ)</span>
+          <p>Là <b>không gian máy chủ</b> (Server) hoạt động liên tục 24/7 để chứa toàn bộ mã nguồn, cơ sở dữ liệu, hình ảnh nhằm hiển thị website ra thế giới mạng.</p>
+          <p class="metaphor"><i>📌 Ẩn dụ: Mảnh đất và ngôi nhà vật lý.</i></p>
+        </div>
+
+        <div class="concept-box border-url">
+          <span class="badge bg-url">URL (Đường dẫn)</span>
+          <p>Là <b>địa chỉ định vị tài nguyên toàn diện</b>. Nó không chỉ chứa tên miền mà còn chỉ rõ cách thức kết nối và vị trí của một file cụ thể trong trang web.</p>
+          <p class="metaphor"><i>📌 Ẩn dụ: Chỉ đường chi tiết vào tận phòng ngủ.</i></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Khám Phá Kiến Trúc URL (2 Mẫu Minh Họa)</h2>
+      <p class="sub-text">Bấm chọn từng URL mẫu dưới đây để xem sự khác biệt trong cấu trúc phân tách:</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchUrl(1)">Mẫu 1: Trang Thương Mại Điện Tử</button>
+        <button class="tab-btn" onclick="switchUrl(2)">Mẫu 2: Công Cụ Tìm Kiếm Tin Tức</button>
+      </div>
+
+      <div class="url-display-container">
+        <div id="url-box-1" class="url-box">
+          <span class="p-protocol" title="Giao thức kết nối bảo mật">https://</span><span class="p-domain" title="Tên miền chính thức">shopee.vn</span><span class="p-path" title="Đường dẫn đến danh mục điện thoại">/phone/iphone-15</span><span class="p-query" title="Tham số lọc màu sắc và sắp xếp giá">?color=titan&sort=desc</span><span class="p-fragment" title="Cuộn thẳng đến khu vực bình luận">#reviews</span>
+        </div>
+        
+        <div id="url-box-2" class="url-box hidden">
+          <span class="p-protocol" title="Giao thức siêu văn bản">http://</span><span class="p-domain" title="Cổng thông tin tin tức">baomoi.com</span><span class="p-path" title="Đường dẫn đến chuyên mục công nghệ">/tech/news</span><span class="p-query" title="Từ khóa tìm kiếm và số trang">?search=ai&page=3</span><span class="p-fragment" title="Định vị tiêu đề video đính kèm">#video-player</span>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Thành phần</th>
+              <th>Giá trị thực tế</th>
+              <th>Ý nghĩa chức năng</th>
+            </tr>
+          </thead>
+          <tbody id="analysis-table-body">
+            </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Mini-project 2 - Được thiết kế thuần bằng HTML/CSS/JS tĩnh. Được lưu trữ trên GitHub Pages.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
